@@ -236,7 +236,8 @@ module FakeS3
       super
       response["Access-Control-Allow-Origin"] = "*"
       response["Access-Control-Allow-Methods"] = "HEAD, GET, PUT, POST"
-      response["Access-Control-Allow-Headers"] = "accept, content-type"
+      response["Access-Control-Allow-Headers"] =
+        "accept, content-disposition, content-range, content-type"
       response["Access-Control-Expose-Headers"] = "ETag, x-amz-meta-custom-header"
     end
 
